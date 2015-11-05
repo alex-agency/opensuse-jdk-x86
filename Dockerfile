@@ -17,7 +17,7 @@ WORKDIR /home/user
 
 RUN zypper --non-interactive update && \
     zypper --non-interactive install wget tar bzip2 firefox.i586 \
-        libXtst6-32bit gtk2-tools.i586 gtk2-devel.i586 && \
+        libXtst6-32bit libXtst-devel.i586 gtk2-tools.i586 gtk2-devel.i586 && \
     zypper --non-interactive clean && rm -rf /tmp/*
 RUN echo "root:$ROOT_PASSWD" | chpasswd
 
